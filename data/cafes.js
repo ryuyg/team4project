@@ -1,0 +1,55 @@
+// 팀원은 아래 cafe 객체를 복사한 뒤 내용만 수정하세요.
+// id는 영문 소문자와 하이픈으로 작성하며 서로 겹치면 안 됩니다.
+window.CAFES = [
+  {
+    id: "slow-cup-seongsu",
+    name: "슬로우 컵",
+    area: "성수",
+    address: "서울 성동구 연무장길 00",
+    author: "김커피",
+    visitedAt: "2026.09.14",
+    image: "assets/cafe-hero.png",
+    imageAlt: "나무 테이블 위 라테와 크루아상",
+    summary: "오후의 빛과 고소한 라테가 오래 기억에 남는 곳",
+    description: "직접 로스팅한 원두의 단맛이 또렷합니다. 좌석 간격이 여유로워 대화하거나 조용히 작업하기 좋았어요.",
+    signature: "헤이즐넛 라테",
+    price: "6,500원",
+    tags: ["라테", "디저트", "조용한"],
+    rating: 4.8,
+    mapUrl: "https://map.naver.com/"
+  },
+  {
+    id: "archive-roasters-mangwon",
+    name: "아카이브 로스터스",
+    area: "망원",
+    address: "서울 마포구 포은로 00",
+    author: "이원두",
+    visitedAt: "2026.09.07",
+    image: "assets/cafe-hero.png",
+    imageAlt: "따뜻한 햇살이 드는 카페의 커피 테이블",
+    summary: "산뜻한 필터 커피와 담백한 공간이 만나는 로스터리",
+    description: "원두 선택지를 친절하게 설명해 줍니다. 산미 있는 커피를 처음 접하는 사람에게도 추천하기 좋은 곳입니다.",
+    signature: "에티오피아 핸드드립",
+    price: "7,000원",
+    tags: ["핸드드립", "로스터리", "데이트"],
+    rating: 4.6,
+    mapUrl: "https://map.naver.com/"
+  },
+  {
+    id: "mellow-table-suwon",
+    name: "멜로우 테이블",
+    area: "수원",
+    address: "경기 수원시 팔달구 화서문로 00",
+    author: "박디저트",
+    visitedAt: "2026.08.30",
+    image: "assets/cafe-hero.png",
+    imageAlt: "크루아상과 라테가 놓인 카페 테이블",
+    summary: "바삭한 페이스트리 때문에 주말마다 생각나는 카페",
+    description: "매일 아침 직접 굽는 크루아상이 대표 메뉴입니다. 커피는 묵직한 편이라 버터 풍미와 잘 어울립니다.",
+    signature: "플레인 크루아상 세트",
+    price: "9,000원",
+    tags: ["베이커리", "주차", "브런치"],
+    rating: 4.7,
+    mapUrl: "https://map.naver.com/"
+  }
+];

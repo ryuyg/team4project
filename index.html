@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="팀원이 함께 기록하는 커피 맛집 아카이브" />
+  <title>COFFEE NOTE — 우리 팀의 커피 맛집</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23261a14'/%3E%3Cpath d='M17 22h27v17a12 12 0 01-12 12h-3a12 12 0 01-12-12V22z' fill='%23f2e8d8'/%3E%3Cpath d='M44 27h3a7 7 0 010 14h-4' fill='none' stroke='%23f2e8d8' stroke-width='5'/%3E%3Cpath d='M25 15c0 3 3 3 3 6M34 13c0 4 3 4 3 8' fill='none' stroke='%23d99058' stroke-width='3' stroke-linecap='round'/%3E%3C/svg%3E" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="커피 노트 홈">
+      <span class="brand-mark">CN</span>
+      <span>COFFEE NOTE</span>
+    </a>
+    <nav aria-label="주요 메뉴">
+      <a href="#cafes">카페 목록</a>
+      <a href="#about">우리의 기준</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero-image" role="img" aria-label="따뜻한 카페 테이블 위 라테와 크루아상"></div>
+      <div class="hero-copy">
+        <p class="eyebrow">TEAM CURATED · 2026</p>
+        <h1>한 잔의 취향을<br />함께 기록합니다.</h1>
+        <p class="hero-description">직접 마셔보고, 오래 머물러 본 우리 팀의 커피 맛집. 유행보다 취향이 분명한 공간을 소개합니다.</p>
+        <a class="text-link" href="#cafes">이번 주 추천 보기 <span aria-hidden="true">↘</span></a>
+      </div>
+    </section>
+
+    <section class="intro" id="about">
+      <p class="section-number">01 — OUR STANDARD</p>
+      <h2>좋은 커피, 편안한 공간,<br />다시 가고 싶은 이유.</h2>
+      <p>원두의 개성, 공간의 온도, 메뉴의 완성도를 팀원의 시선으로 기록합니다. 광고가 아닌 실제 방문 경험을 담습니다.</p>
+    </section>
+
+    <section class="cafes-section" id="cafes">
+      <div class="section-heading">
+        <div>
+          <p class="section-number">02 — PLACES</p>
+          <h2>팀원이 고른 카페</h2>
+        </div>
+        <p id="cafe-count" class="count" aria-live="polite"></p>
+      </div>
+      <div class="filters" id="filters" aria-label="팀원 이름 필터"></div>
+      <div class="cafe-grid" id="cafe-grid"></div>
+      <p class="empty-state" id="empty-state" hidden>이 지역에 등록된 카페가 아직 없습니다.</p>
+    </section>
+  </main>
+
+  <dialog id="cafe-dialog" aria-labelledby="dialog-title">
+    <button class="dialog-close" type="button" aria-label="상세 창 닫기">×</button>
+    <div id="dialog-content"></div>
+  </dialog>
+
+  <footer>
+    <span>COFFEE NOTE</span>
+    <span>좋은 취향은 나눌수록 선명해집니다.</span>
+  </footer>
+
+  <script src="data/cafes.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

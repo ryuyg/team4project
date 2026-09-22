@@ -1,0 +1,98 @@
+:root {
+  --ink: #241913;
+  --paper: #f4eee4;
+  --cream: #fffaf1;
+  --accent: #b9572a;
+  --line: rgba(36, 25, 19, 0.2);
+  --muted: #77685f;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; color: var(--ink); background: var(--paper); font-family: Arial, "Noto Sans KR", sans-serif; line-height: 1.65; }
+button, a { font: inherit; }
+a { color: inherit; }
+img { display: block; width: 100%; }
+
+.site-header { height: 76px; display: flex; align-items: center; justify-content: space-between; padding: 0 4vw; border-bottom: 1px solid var(--line); background: var(--paper); }
+.brand { display: flex; gap: 12px; align-items: center; text-decoration: none; font-size: .88rem; font-weight: 800; letter-spacing: .12em; }
+.brand-mark { display: grid; place-items: center; width: 38px; height: 38px; border-radius: 50%; color: var(--cream); background: var(--ink); font-family: Georgia, serif; letter-spacing: 0; }
+nav { display: flex; gap: 30px; }
+nav a { text-decoration: none; font-size: .88rem; }
+nav a:hover { color: var(--accent); }
+
+.hero { min-height: calc(100vh - 76px); display: grid; grid-template-columns: 1.2fr .8fr; border-bottom: 1px solid var(--line); }
+.hero-image { min-height: 640px; background: linear-gradient(90deg, transparent 70%, rgba(36,25,19,.15)), url("assets/cafe-hero.png") center/cover; }
+.hero-copy { padding: 9vw 6vw 6vw; display: flex; flex-direction: column; justify-content: center; }
+.eyebrow, .section-number { margin: 0 0 24px; color: var(--accent); font-size: .76rem; font-weight: 800; letter-spacing: .16em; }
+h1, h2, h3 { font-family: Georgia, "Times New Roman", serif; font-weight: 500; line-height: 1.1; }
+h1 { margin: 0; font-size: clamp(3.3rem, 6vw, 7rem); letter-spacing: -.055em; }
+.hero-description { max-width: 430px; margin: 36px 0; color: var(--muted); font-size: 1rem; }
+.text-link { width: fit-content; padding-bottom: 5px; border-bottom: 1px solid; text-decoration: none; font-weight: 700; }
+
+.intro { padding: 120px 8vw; display: grid; grid-template-columns: .7fr 1.4fr 1fr; gap: 5vw; align-items: start; border-bottom: 1px solid var(--line); }
+.intro h2 { margin: 0; font-size: clamp(2.4rem, 4vw, 4.8rem); letter-spacing: -.045em; }
+.intro > p:last-child { margin: 8px 0 0; color: var(--muted); }
+.cafes-section { padding: 110px 4vw 140px; }
+.section-heading { display: flex; justify-content: space-between; align-items: end; margin-bottom: 35px; }
+.section-heading h2 { margin: 0; font-size: clamp(2.8rem, 5vw, 5.4rem); letter-spacing: -.05em; }
+.count { color: var(--muted); font-size: .8rem; letter-spacing: .12em; }
+.filters { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 45px; }
+.filter-button { padding: 9px 17px; border: 1px solid var(--line); border-radius: 100px; background: transparent; color: var(--ink); cursor: pointer; }
+.filter-button:hover, .filter-button.is-active { color: var(--cream); background: var(--ink); }
+.cafe-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 28px; }
+.cafe-card { border-top: 1px solid var(--ink); }
+.card-open { width: 100%; padding: 16px 0 0; border: 0; background: transparent; color: inherit; text-align: left; cursor: pointer; }
+.card-image-wrap { position: relative; aspect-ratio: 4/3; overflow: hidden; background: #d8c7b4; }
+.card-image-wrap img { height: 100%; object-fit: cover; transition: transform .55s ease; }
+.card-open:hover img { transform: scale(1.035); }
+.card-index { position: absolute; top: 12px; left: 12px; padding: 5px 9px; color: var(--cream); background: var(--ink); font-size: .72rem; }
+.card-content { padding: 20px 4px 12px; }
+.card-meta { display: flex; justify-content: space-between; color: var(--accent); font-size: .75rem; font-weight: 800; letter-spacing: .1em; }
+.card-content h3 { margin: 12px 0 8px; font-size: 2rem; }
+.card-content p { min-height: 52px; margin: 0 0 18px; color: var(--muted); }
+.tags { display: flex; flex-wrap: wrap; gap: 10px; font-size: .78rem; }
+.card-author { display: block; margin-top: 20px; padding-top: 13px; border-top: 1px solid var(--line); color: var(--muted); font-size: .78rem; }
+.empty-state { padding: 60px 0; color: var(--muted); text-align: center; }
+
+dialog { width: min(920px, calc(100% - 32px)); max-height: calc(100vh - 32px); padding: 0; border: 0; background: var(--cream); color: var(--ink); }
+dialog::backdrop { background: rgba(20, 12, 8, .72); backdrop-filter: blur(4px); }
+.dialog-close { position: fixed; z-index: 2; top: max(28px, calc((100vh - min(760px, 100vh - 32px))/2 + 12px)); right: max(28px, calc((100vw - min(920px, 100vw - 32px))/2 + 12px)); width: 42px; height: 42px; border: 0; border-radius: 50%; color: var(--cream); background: var(--ink); cursor: pointer; font-size: 1.7rem; line-height: 1; }
+#dialog-content { display: grid; grid-template-columns: 1fr 1fr; min-height: 600px; }
+.dialog-image { height: 100%; object-fit: cover; }
+.dialog-body { padding: 70px 50px 50px; }
+.dialog-body h2 { margin: 0; font-size: 3.4rem; letter-spacing: -.04em; }
+.dialog-summary { color: var(--accent); font-size: 1.05rem; font-weight: 700; }
+dl { margin: 30px 0; border-top: 1px solid var(--line); }
+dl div { display: grid; grid-template-columns: 90px 1fr; padding: 12px 0; border-bottom: 1px solid var(--line); }
+dt { color: var(--muted); font-size: .82rem; }
+dd { margin: 0; font-size: .9rem; }
+.map-link { display: inline-block; padding: 12px 18px; color: var(--cream); background: var(--accent); text-decoration: none; font-weight: 700; }
+footer { padding: 42px 4vw; display: flex; justify-content: space-between; color: var(--paper); background: var(--ink); font-size: .8rem; letter-spacing: .08em; }
+
+@media (max-width: 900px) {
+  .hero { grid-template-columns: 1fr; }
+  .hero-image { min-height: 52vh; }
+  .hero-copy { padding: 70px 7vw 90px; }
+  .intro { grid-template-columns: 1fr; padding: 90px 7vw; }
+  .intro .section-number { margin-bottom: 0; }
+  .cafe-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  #dialog-content { grid-template-columns: 1fr; }
+  .dialog-image { max-height: 340px; }
+}
+
+@media (max-width: 600px) {
+  .site-header { height: 66px; }
+  nav { gap: 14px; }
+  nav a:last-child { display: none; }
+  .hero { min-height: 0; }
+  .hero-image { min-height: 46vh; }
+  h1 { font-size: 3.4rem; }
+  .cafes-section { padding: 80px 5vw 100px; }
+  .section-heading { align-items: start; }
+  .cafe-grid { grid-template-columns: 1fr; }
+  .card-content p { min-height: 0; }
+  .dialog-body { padding: 48px 24px 34px; }
+  .dialog-body h2 { font-size: 2.6rem; }
+  footer { gap: 20px; flex-direction: column; }
+}
